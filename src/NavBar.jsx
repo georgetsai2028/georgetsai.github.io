@@ -1,4 +1,3 @@
-import {Link} from react-router-dom
 import './NavBar.css'
 
 export default function NavBar(){
@@ -6,16 +5,16 @@ export default function NavBar(){
         <nav className="nav">
             <ul>
                 <li>
-                    <a href='/'>about Me</a>
+                    <a href='#about'>about</a>
                 <li>
                 <li>
-                    <a href='/experience'>experience</a>
+                    <a href='#experience'>experience</a>
                 </li>
                 </li>
-                    <a href='/projects'>projects</a>
+                    <a href='#projects'>projects</a>
                 </li>
                 <li>
-                    <a href='/resume'>resume</a>
+                    <a href='#resume'>resume</a>
                 </li>
             </ul>
 
