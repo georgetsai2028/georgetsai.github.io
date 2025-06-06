@@ -1,5 +1,6 @@
 import './App.css'
 import NavBar from './NavBar'
+import QuoteDisplay from './QuoteDisplay'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         <div className='photo'></div>
       </div>
       <NavBar></NavBar>
+      <QuoteDisplay/>
       <div id='about'>
 
       </div>
