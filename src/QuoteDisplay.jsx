@@ -6,17 +6,17 @@ const quotes = [
 ]
 
 export default function QuoteDisplay(){
-    const [quote, setQuote] = useState(0);
+    const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
     useEffect(() => {
     const interval = setInterval(() => {
         setFade(false); //start to fade out the text
         setTimeout(() => {
-            setIndex((prev = prev + 1) % quotes.length); //change quote
+            setIndex((prev) => (prev + 1) % quotes.length); //change quote
             setFade(true); //start to fade in the text
         }, 500); //fade out duration
-    }, 5000); //change quote every 5 seconds
+    }, 2000); //change quote every 5 seconds
     return () => clearInterval(interval);
 }, []); //clears interval timer to restart useEffect
 

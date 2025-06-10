@@ -8,13 +8,11 @@ function App() {
     <>
     <div className='mainContainer'>
       <div className='description'>
-        <h1></h1>
         <div className='photo'></div>
       </div>
       <NavBar></NavBar>
-      <QuoteDisplay/>
       <div id='about'>
-
+      <QuoteDisplay></QuoteDisplay>
       </div>
       <div id='project'>
 
