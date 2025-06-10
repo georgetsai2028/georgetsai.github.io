@@ -1,20 +1,28 @@
 import './QuoteDisplay.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const quotes = [
     "CODE", "INNOVATE", "CREATE", "EXPLORE", "THINK", "IMAGINE"
 ]
 
 export default function QuoteDisplay(){
-    const [quote, setQuote] = useState(1)
+    const [quote, setQuote] = useState(0);
+    const [fade, setFade] = useState(true);
 
-    function handleDisplay(){
-        {quotes.map(quotes[quote])}
-    }
+    useEffect(() => {
+    const interval = setInterval(() => {
+        setFade(false); //start to fade out the text
+        setTimeout(() => {
+            setIndex((prev = prev + 1) % quotes.length); //change quote
+            setFade(true); //start to fade in the text
+        }, 500); //fade out duration
+    }, 5000); //change quote every 5 seconds
+    return () => clearInterval(interval);
+}, []); //clears interval timer to restart useEffect
 
-    return(
-        <h2>
-            {quotes.map(quotes[quote])}
-        </h2>
-    )
+    return (
+    <h2 className={`quote ${fade ? 'fade-in' : 'fade-out'}`}>
+      {quotes[index]}
+    </h2>
+  );
 }
