@@ -6,13 +6,16 @@ export default function NavBar(){
             <ul>
                 <li>
                     <a href='#about'>about</a>
-                <li>
+                </li>
+
                 <li>
                     <a href='#experience'>experience</a>
                 </li>
-                </li>
+
+                <li>
                     <a href='#projects'>projects</a>
                 </li>
+
                 <li>
                     <a href='#resume'>resume</a>
                 </li>
